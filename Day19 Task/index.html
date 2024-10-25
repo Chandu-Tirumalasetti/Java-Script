@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day19 Task</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+              font-size: 2em;
+              background-color: skyblue;
+              width: 30vw;
+              height: 30vh;
+              border-radius: 10px;
+        }
+        h1{
+            display: inline;
+        }
+        #hours{
+            color: brown;
+        }
+        #minutes{
+            color:blueviolet;
+        }
+        #ampm{
+            color: crimson;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="hours">00</h1>    
+        <h1>:</h1>    
+        <h1 id="minutes">00</h1>    
+        <h1>:</h1>    
+        <h1 id="seconds">00</h1>
+        <h1 id="ampm">AM</h1>
+    </div>
+
+    <script>
+        function clock(){
+        let hours=document.getElementById("hours");
+        let minutes=document.getElementById("minutes");
+        let seconds=document.getElementById("seconds");
+        let ampm=document.getElementById("ampm");
+
+        let h=new Date().getHours();
+        let m=new Date().getMinutes();
+        let s=new Date().getSeconds();
+        let ap="AM";
+
+        if(h>12){
+            h=h-12;
+            ap="PM";
+        }
+        if(h<10){
+            h="0"+h;
+        }
+        if(m<10){
+            m="0"+m;
+        }
+        if(s<10){
+            s="0"+s;
+        }
+
+        hours.innerHTML=h;
+        minutes.innerHTML=m;
+        seconds.innerHTML=s;
+        ampm.innerHTML=ap;
+        }
+        var interval=setInterval(clock,1000);
+        
+    </script>
+</body>
+</html>

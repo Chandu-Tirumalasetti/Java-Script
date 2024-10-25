@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough</title>
+</head>
+<body>
+    <!-- <button onclick="fun()">Click Here</button>
+   <div id="child">javascript</div>
+   <div id="child">javascript</div>
+   <div id="child">javascript</div>
+   <div id="child">javascript</div> -->
+
+   <button onclick="bg()">Click Me</button>
+
+    <script>
+        // function fun(){
+        // let ch=document.querySelectorAll("#child");
+        // ch[0].style.backgroundColor="red";
+        // ch[1].style.backgroundColor="blue";
+        // ch[2].style.backgroundColor="green";
+        // ch[3].style.backgroundColor="yellow";
+        // console.log(ch);
+        // }
+
+        // let a=document.createElement("h1");
+        // a.innerHTML="<b>"+"If you respect me,I will respect you"+"</b>";
+        // a.style.color="yellow";
+        // console.log(a);
+        // document.body.appendChild(a);
+
+        // let b=document.createElement("h3");
+        // b.innerHTML="<i>" + "If you respect me,I will respect you" + "</i>";
+        // b.style.color="orange";
+        // console.log(b);
+        // document.body.appendChild(b);
+
+        // let c=document.createElement("hr");
+        // console.log(c);
+        // document.body.appendChild(c);
+
+        // var ul=document.createElement("ul");
+        // var li1=document.createElement("li");
+        // var li2=document.createElement("li");
+        // var li3=document.createElement("li");
+        // li1.innerHTML="HTML";
+        // li2.innerHTML="CSS";
+        // li3.innerHTML="JAVASCRIPT";
+        //   ul.append(li1,li2,li3);
+        //   document.body.appendChild(ul);
+
+
+        // let edu=document.createElement("h3");
+        // edu.innerHTML="Education<hr>";
+        // document.body.append(edu);
+        // let clg=document.createElement("h3");
+        // clg.innerHTML="College";
+        // document.body.append(clg);
+        // let clgname=document.createElement("p");
+        // clgname.style.textAlign="center"
+        // clgname.style.marginTop="-30px"
+        // clgname.innerText="svkp";
+        // document.body.append(clgname);
+
+        // let div=document.createElement("h2");
+        // div.innerText="Chandu is a Google CEO";
+        // div.style.color="yellow";
+        // let firstdiv=document.querySelector("#child");
+        // firstdiv.append(div);
+        // console.log(firstdiv);
+
+        // let arr=["pink","yellow","green","orange"];
+        // var count=0;
+        // function bg(){
+        //     document.body.style.background=arr[count];
+        //     count++;
+        //     if(count==arr.length){
+        //         count=0;
+        //     }
+        // }
+        function bg(){
+        let arr=["pink","yellow","green","orange"];
+        let div=document.createElement("h1");
+        div.innerText="chandu";
+        for(i=0;i<arr.length;i++){
+
+            div.style.color=arr[i];
+        }
+        document.body.append(div);
+    }
+    </script>
+</body>
+</html>

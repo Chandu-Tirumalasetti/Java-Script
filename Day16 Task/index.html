@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day16 Task</title>
+</head>
+<body>
+
+
+    <script>
+        // Add elements to an array and iterate using for loop and for in loop and for of loop
+        // Create an array of your favorite movies and iterate an array  to the console.
+        let movie = ["Bheemla Nayak", "Vakeel Saab", "Gabbar Singh", "Tholi Prema", "Thammudu", "Badri"];
+        console.log("using For Loop");
+        for (i = 0; i < movie.length; i++) {
+            console.log(movie[i]);
+        }
+        console.log("Using for in Loop");
+        for (i in movie) {
+            console.log(movie[i]);
+        }
+        console.log("Using For of Loop");
+        for (i of movie) {
+            console.log(i);
+        }
+
+       
+        // Remove elements from an array
+        // Remove the first and last elements from the array.
+        let remove = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        remove.shift();
+        remove.pop();
+        console.log(remove);
+
+         
+        // Reverse an array using for loop 
+        let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let rev = [];
+        for (i = ar.length - 1; i >= 0; i--) {
+            rev.push(ar[i]);
+        }
+        console.log(rev);
+
+        
+        // find the even and odd numbers in an array [12,3,5,6,22,56,29] and print the evensum and oddsum
+        let arr1 = [12, 3, 5, 6, 22, 56, 29];
+        evensum = 0;
+        oddsum = 0;
+        for (i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 == 0) {
+                console.log(arr1[i]);
+                evensum += (arr1[i]);
+            }
+            else {
+                console.log(arr1[i]);
+                oddsum += (arr1[i]);
+            }
+        }
+        console.log("Even sum is", evensum);
+        console.log("Odd sum is", oddsum);
+
+
+        // Take a heterogenious array and separate each data type into new array
+        let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, { name: "object" }];
+        let num = [];
+        let str = [];
+        let boo = [];
+        let obj = [];
+        for (i = 0; i < arr.length; i++) {
+            // let item=arr[i];
+            if (typeof arr[i] === "number") {
+                num.push(arr[i]);
+            }
+            if (typeof arr[i] === "string") {
+                str.push(arr[i]);
+            }
+            if (typeof arr[i] === "boolean") {
+                boo.push(arr[i]);
+            }
+            if (typeof arr[i] === "object") {
+                obj.push(arr[i]);
+            }
+        }
+        console.log(num);
+        console.log(str);
+        console.log(boo);
+        console.log(obj);
+
+    </script>
+</body>
+</html>

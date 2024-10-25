@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 Task</title>
+</head>
+<body>
+
+    <script>
+        // TEMPERATURE CHECK
+        let a=+prompt("Enter your Temperature");
+        console.log("Temperature:"+a);
+        let temp=(a>30)?"HOT" : (a>=20) && (a<=30)?"WARM" : (a>=10) && (a<=19)?"COOL" : (a<=9)?"COLD":"INVALID TEMPERATURE";
+        console.log(temp);
+
+        // AGE GROUP
+        let b=+prompt("Enter your Age");
+        console.log("Age:"+b);
+        let age=(b>=0) && (b<=12)?"CHILD" : (b>=13) && (b<=19)?"TEEN" : (b>=20) && (b<=64)?"ADULT" : (b>64)?"SENIOR CITIZEN":"NOT A HUMAN";
+        console.log(age);
+
+        // GRADE CLASSIFICATION
+        let c=+prompt("Enter your MArks");
+        console.log("Marks:"+c);
+        let grade=(c>=95)&& (c<=100)?"Grade:A+" : (c>=90) && (c<=94)?"Grade:A" : (c>=75)?"Grade:B" : (c>=60)?"Grade:C" : (c>=45)?"Grade:D" : (c<45)?"Grade:F":"NOT ATTEND THE EXAM";
+        console.log(grade);
+        
+    </script> 
+</body>
+</html>

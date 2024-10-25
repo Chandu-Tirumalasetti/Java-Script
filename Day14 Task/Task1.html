@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14 Task1</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 2%;
+        }
+        img{
+            width: 100%;
+            height: 40vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+    </div>
+
+    <script>
+        let names=["summer House","Brick House","Renovated","Barn House","summer House","Brick House","Renovated","Barn House"];
+        let images=["https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg"];
+        let container=document.querySelector(".container");
+        for(i=0;i<names.length;i++){
+            let child=document.createElement("div");
+            let child1=document.createElement("div");
+            child1.innerText=names[i];
+        child1.style.background="black";
+        child1.style.color="white";
+        child1.style.padding="10px";
+        child1.style.width="30%";
+        let child2=document.createElement("img");
+        child2.src=images[i];
+        child.append(child1,child2);
+        container.appendChild(child);
+        console.log(container);
+        }
+    </script>
+</body>
+</html>

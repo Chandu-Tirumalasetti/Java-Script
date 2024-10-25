@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day13 Task</title>
+    <style>
+        /* .ch{
+            width:50vw;
+            color: yellow;
+            border:1px solid orange;
+            font-size: 3em;
+        } */
+
+        .container{
+            width: 30vw;
+            height: 50vh;
+            /* border: 1px solid; */
+        }
+        img{
+            width:30vw;
+            height: 50vh;
+        }
+        button{
+            width: 100px;
+            height: 5vh;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- <img src="billigates.jpg" alt="broken"> -->
+     <div class="container">
+       <img id="img2" src="https://img.freepik.com/free-photo/buddhism-statue-floral-garden-scene-generative-ai_188544-12796.jpg" alt="">
+    </div>
+    <h1>Google CEO<button id="button1">click </button></h1>
+    <h1>Microsoft Founder<button id="button2">click</button></h1>
+    <h1>Twitter CEO<button id="button3">click</button></h1>
+    <h1>Are you Know,Who is next CEO of Google?<br>
+        click Here<button id="button4">click</button></h1>
+
+
+    <script>
+       
+      let btn1=document.getElementById("button1")
+      var img2=document.getElementById("img2");
+      btn1.addEventListener("click",function(){
+        img2.src="sundhar Pichai.jpg"
+      })
+
+      let btn2=document.getElementById("button2")
+      var img2=document.getElementById("img2");
+      btn2.addEventListener("click",function(){
+        img2.src="billigates.jpg"
+      })
+
+      let btn3=document.getElementById("button3")
+      var img2=document.getElementById("img2");
+      btn3.addEventListener("click",function(){
+        img2.src="Parag Agarwal.jpg"
+      })
+
+      let btn4=document.getElementById("button4")
+      var img2=document.getElementById("img2");
+      btn4.addEventListener("click",function(){
+        img2.src="IMG_20240529_203133_937.jpg"
+      })
+
+
+    </script>
+</body>
+</html>

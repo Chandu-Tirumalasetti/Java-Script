@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14 Task4</title>
+</head>
+<style>
+    .container{
+        height: 30vh;
+        width: 40vw;
+        border: 2px solid;
+        margin-top: 15%;  
+        margin-left: 30%; 
+        background-color:grey;
+    }
+    .container2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+   #op{
+    background-color: rgb(108, 200, 230);
+    color: black;
+    border: 2px solid black;
+    height: 4vh;
+   }
+   #inp1,#inp2{
+    border: 2px solid;
+    height: 4vh;
+    background-color:white;
+    border: none;
+   }
+   #add,#sub,#mul,#divi{
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 5vw;
+    font-size: x-large;
+    background-color:lightcoral;
+   }
+   
+  
+</style>
+<body>
+    <div class="container">
+       <center> <h2>Simple Calculator</h2></center>
+          <div class="container2">
+    
+              <input type="number" id="inp1" placeholder="Enter first value">
+              <input type="number" id="inp2" placeholder="Enter second value"> <span>  = </span>
+              <input type="number" id="op" placeholder="Result"><br><br>
+         </div><br>
+          <center>
+              <button id="add">+</button>
+              <button id="sub">-</button>
+              <button id="mul">*</button>
+              <button id="divi">/</button>
+          </center>
+</div>
+    <script>
+        let inp1=document.getElementById("inp1");
+        let inp2=document.getElementById("inp2");
+
+        let addi=document.getElementById("add");
+        let subt=document.getElementById("sub");
+        let mult=document.getElementById("mul");
+        let divis=document.getElementById("divi");
+        
+        let result=document.getElementById("op");
+  
+        addi.addEventListener("click",()=>{
+             result.value= Number(inp1.value)+Number(inp2.value);
+        })
+        subt.addEventListener("click",()=>{
+            result.value= Number(inp1.value)-Number(inp2.value);
+        })
+        mult.addEventListener("click",()=>{
+            result.value=Number(inp1.value)*Number(inp2.value);
+        })
+        divis.addEventListener("click",()=>{
+            result.value=Number(inp1.value)/Number(inp2.value);
+        })
+       
+    </script>
+</body>
+</html>

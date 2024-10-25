@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 Task</title>
+</head>
+
+<body>
+
+    <script>
+        // Take prompt and Convert to Uppercase
+        let a = prompt("Enter a Name ");
+        var res = a.toUpperCase();
+        console.log(res);
+
+        //Take prompt and Convert to Lowercase 
+        let b = prompt("Enter a Name ");
+        var res = b.toLowerCase();
+        console.log(res);
+
+        // Take prompt and Reverse a String
+        let c = prompt("Enter a Name ");
+        let emp = "";
+        for (i = c.length - 1; i >= 0; i--) {
+            emp += c[i];
+        }
+        console.log(emp);
+
+        // Take prompt and Count the number of vowels in a string hints use match method
+        let vow = prompt("Enter the Name ");
+        count = 0;
+        console.log(vow.match(/[a,e,i,o,u]/gi));
+        for (i = 0; i < vow.length; i++) {
+            if (vow[i].match(/[a,e,i,o,u]/gi)) {
+                count++;
+            }
+        }
+        console.log(count);
+
+
+        // Username Validation
+        let vali = "chandu";
+        if (vali.length < 5) {
+            console.log("Not Valid");
+        }
+        else if (vali.length >= 5) {
+            console.log("Valid");
+        }
+        else {
+            console.log("Not a Str");
+        }
+
+
+        // Email Formatter
+        var frst = prompt("Enter a First Name ");
+        let last = prompt("Enter A Last Name ");
+        let add = "@gmail.com";
+        email = frst + last.concat(c);
+        console.log(email);
+
+
+        // Word Counter
+        let word_counter = "chandu is google ceo and IAS officer";
+        words = word_counter.split(" ");
+        count = 0;
+        console.log(words);
+        for (i = 0; i < words.length; i++) {
+            count++
+        }
+        console.log(count);
+
+
+        // Palindrome
+        let str = "amma";
+        let empt = str.split("").reverse().join("");
+        let str2 = str;
+        console.log(empt);
+        if (str2 === empt) {
+            console.log("Palindrome");
+        }
+        else {
+            console.log("Not Palindrome");
+        }
+    </script>
+</body>
+
+</html>

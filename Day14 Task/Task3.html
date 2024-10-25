@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14 Task3</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: grey;
+        }
+        #inp1,#inp2{
+            font-size: 2em;
+            margin: 2%;
+        }
+        label{
+            font-size: 2em;
+        }
+        button{
+            padding: 2%;
+            width: 10vw;
+            border-radius: 5px;
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <label for="inp1">Enter a Password: </label>
+    <input type="password" id="inp1"><br>
+    <label for="inp1">Confirm Password: </label>
+    <input type="password" id="inp2"><br>
+    <button type="submit" value="submit">Submit</button>
+    </div>
+
+
+    <script>
+    let inp1=document.getElementById("inp1");
+    let inp2=document.getElementById("inp2");
+    let btn=document.getElementsByTagName("button")[0];
+    btn.addEventListener("click",function(){
+        if(inp1.value==""||inp2.value==""){
+              alert("Incorrect Password!!")
+        }
+        else if(inp1.value===inp2.value){
+            alert("Password Created successfully");
+        }
+        else{
+            alert("OOPS!! Password Doesn,t match!");
+        }
+    })
+
+    </script>
+</body>
+</html>

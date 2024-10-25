@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14 Task2</title>
+    <style>
+        label{
+            font-size: 20px;
+        }
+        input{
+            padding: 10px;
+            width: 20%;
+        }
+        button{
+            padding: 5px;
+            background-color: greenyellow;
+        }
+        div{
+            font-size: 25px;
+            margin-left: 12%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="inp1">Enter Your Password</label>
+        <input type="text" id="inp1">
+        <button type="submit" value="submit">Submit</button>
+    </form>
+
+    <script>
+        let input=document.getElementById("inp1");
+
+        let button=document.getElementsByTagName("button")[0];
+        button.addEventListener("click",function(event){
+            event.preventDefault();
+            if(input.value.length=="" || input.value.length==0){
+               var div=document.createElement("div");
+               div.innerHTML="Invalid password";
+               div.style.color="red";
+               document.body.append(div);
+            }
+            else if(input.value.length<8){
+               var div=document.createElement("div");
+               div.innerHTML="Your Password is Weak!!";
+               div.style.color="blue";
+               document.body.append(div);
+            }
+            else if(input.value.length>=8 && input.value.length<=12){
+               var div=document.createElement("div");
+               div.innerHTML="Your Password is Medium!!";
+               div.style.color="orange";
+               document.body.append(div);
+            }
+            // else if(input.value.length>=13){
+            else{
+               var div=document.createElement("div");
+               div.innerHTML="Your Password is Strong!!";
+               div.style.color="Green";
+               document.body.append(div);
+            }
+
+        })
+        console.log(input.value);
+    </script>
+</body>
+</html>
